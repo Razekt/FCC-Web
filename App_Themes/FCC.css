@@ -1,0 +1,27 @@
+﻿thead {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.table-head {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.row_grd {
+    background-color: #FFFFFF;
+}
+
+.alternate_row_grd {
+    background-color: #E0E0E0;
+}
+
+.panel-content {
+    font-size: large;
+    font-weight: bold;
+}
+
+a.login:link, a.login:visited, a.login:active, a.login:hover, span.login {
+    color: #fff;
+    text-decoration: none;
+}

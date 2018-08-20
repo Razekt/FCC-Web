@@ -1,0 +1,46 @@
+﻿<%@ Master Language="VB" CodeFile="PagMaster.master.vb" Inherits="PagMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Fuzzy com Coppe-Cosenza</title>
+
+    <link rel="stylesheet" href="Scripts/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Scripts/footer.css" />
+    <link rel="stylesheet" href="App_Themes/FCC.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <asp:ContentPlaceHolder id="cabecalho" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmERP" runat="server">
+        <%="" %>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="<%= ResolveUrl("~/") %>Default.aspx">FCC Web</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder id="conteudo" runat="server">
+            
+        </asp:ContentPlaceHolder>
+        <asp:TextBox runat="server" ID="Resp" CssClass="text-hide"></asp:TextBox>
+    </form>    
+
+     <%--Scripts do bootstrap--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Scripts/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[id*='btnDeletar']").click(function () {
+                document.getElementById("Resp").value = prompt('Qual coluna deseja deletar?', 'FR1');
+            });
+        });
+    </script>
+</body>
+</html>
